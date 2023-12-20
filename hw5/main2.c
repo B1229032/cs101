@@ -6,7 +6,12 @@ int main() {
     
     for(int i = 0 ; ;i++){
         sum += 1.0 / 2 * i + 1;
-        (i % 2) ? (PI -= sum) : (PI += sum);
+        if(i % 2) {
+            PI -= sum;
+         }
+         else{
+            PI += sum;
+         }
         if((long)(4 * PI * 100000) == 314159){
             x = i;
             break;
